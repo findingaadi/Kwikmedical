@@ -2,7 +2,7 @@ import cx_Oracle
 import os
 from dotenv import load_dotenv
 
-
+load_dotenv()
 def get_db_connection():
     try:
         dsn = cx_Oracle.makedsn(os.getenv("DB_HOST"), os.getenv("DB_PORT"), sid=os.getenv("DB_SID"))
